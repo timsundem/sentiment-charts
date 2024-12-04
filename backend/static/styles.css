@@ -1,0 +1,90 @@
+/* styles.css */
+
+:root {
+    --primary-color: #4a90e2; /* Main blue */
+    --primary-hover: #357abd; /* Hover blue */
+    --secondary-color: #6bcf92; /* Soft green */
+    --background-color: #f5f7fa; /* Light grayish-blue */
+    --text-color: #212529; /* Dark text */
+    --footer-bg: #343a40; /* Dark gray */
+    --footer-text: #ffffff; /* White */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--footer-text) !important;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    color: var(--footer-text);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+form#search-form {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--footer-text);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form#search-form .form-control {
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+form#search-form .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-hover);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}

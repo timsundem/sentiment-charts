@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Charts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sentiment Charts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Track Stock and Crypto Trends</h1>
+            <p>Search by ticker and explore historical trends.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Chart Column -->
+            <div class="col-md-8">
+                <form id="search-form" class="mb-4">
+                    <div class="input-group">
+                        <input type="text" id="ticker" class="form-control" placeholder="Enter Ticker (e.g., AAPL, BTC)">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </form>
+                <div id="loading" class="text-center" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div class="chart-container" style="position: relative; height: 50vh; width: 100%;">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Stock Details and Sentiment Column -->
+            <div class="col-md-4">
+                <div id="stock-details" class="mb-4">
+                    <h3>Stock Details</h3>
+                    <p><strong>Current Price:</strong> <span id="current-price">N/A</span></p>
+                    <p><strong>52-Week High:</strong> <span id="high">N/A</span></p>
+                    <p><strong>52-Week Low:</strong> <span id="low">N/A</span></p>
+                    <p><strong>Market Cap:</strong> <span id="market-cap">N/A</span></p>
+                </div>
+                <div id="sentiment-analysis">
+                    <h3>Sentiment Analysis</h3>
+                    <p><strong>Positive:</strong> <span id="positive">N/A</span></p>
+                    <p><strong>Neutral:</strong> <span id="neutral">N/A</span></p>
+                    <p><strong>Negative:</strong> <span id="negative">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>This project is in development and is for educational purposes only. It should not be used for making financial decisions.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
